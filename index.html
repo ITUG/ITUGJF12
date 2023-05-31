@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ITUG JOUR FIXE 11</title>
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+        <!-- styles for included libraries -->
+        <!-- unite gallery -->
+        <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+        <!-- swiper -->
+        <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+        <!-- hint styles -->
+        <link href="resources/css/hint.css" rel="stylesheet" />
+        <!-- js needed in head -->
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js"></script>
+    </head>
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h5><strong>2023-05-31</strong> ZOOM-Universe </h5>
+                <h5>
+                    <strong>
+                        <a href="http://www.itug.de/pages/tustep_jour_fixe.html#JF12">ITUG Jour Fixe
+                            12</a>
+                    </strong>
+                </h5>
+                <h2 class="down-100">TUSTEP als externes Tool in XML-Workflows</h2>
+                <!-- <h3 class=" down-25">Eine Einführung</h3>-->
+                <h5 class="medium" style="color:gray"><kbd class="keyboard">Leertaste</kbd> oder
+                        <kbd class="keyboard">←</kbd> Pfeiltasten <kbd class="keyboard">→</kbd> für
+                    Navigation</h5>
+                <h5 class="down-25">Präsentation <a href="https://itug.github.io/ITUGJF12"
+                        title="View the presentation online"
+                    >https://itug.github.io/ITUGJF12</a><br />Daten <a
+                        href="https://github.com/ITUG/ITUGJF12"
+                    >https://github.com/ITUG/ITUGJF12</a><br />Download <a
+                        href="https://github.com/ITUG/ITUGJF12/archive/refs/heads/main.zip"
+                        >Präsentation und Daten</a> (zip)</h5>
+                <h5 class="down-75">
+                    <strong>
+                        <a href="https://orcid.org/0000-0003-1904-1841" target="_blank">Thomas
+                            Kollatz</a>
+                    </strong>
+                    <img src="resources/img/mastodon.png" alt="mastodon" class="twitter-icon" />
+                    <a href="https://mastodon.social/@thomaskollatz@nrw.social"
+                        title="Thomas Kollatz on Mastodon" target="_blank"
+                        >@thomaskollatz@nrw.social</a>
+                    <br />
+                    <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+                </h5>
+            </div>
+            <div class="step">
+                <h2>Beispiele</h2>
+                <div class="row">
+                    <div class="six columns" style="background:#e9c3b6"><p><code>BKD_get_entities</code> sammelt <code>//text//rs</code> und gibt diese nach *type* in <code>list/item/name</code>  in  Datei sowie Zwischenspeicher aus</p></div>
+                    <div class="six columns" style="background:#AD84D6"><p><code>BKD_text</code> exportiert Korrespondenz in chronologischer Reihenfolge mit farblich hervorgehobenem Markup als <code>RTF</code></p></div>
+                </div>
+                <div class="row">
+                    <div class="six columns" style="background:#FFE8A3"><p><code>BKD_state_of_art</code> analysiert <code>//revisionDesc/change</code> und exportiert importierbare Tabelle</p></div>
+                    <div class="six columns" style="background:#A5E3C0"><p><code>FBW_lesetext</code> exportiert Apparate und Zitate als Fuss- und Endnoten, Zotero-IDs durch <code>short-title</code> ersetzt und mit hyperlinks zur Literaturdatenbank</p></div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>TUSTEP ausserhalb des desktops</h2>
+                <ul>
+                    <li> TUSTEP – als Remote-Sitzungen (serverbasiert) </li>
+                    <li>TUSTEP_CGI – als Webservice</li>
+                    <li>TUSTEP_CMD – als Systemkommando</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h2>TUSTEP als Systemkommando</h2>
+                <blockquote>TUSTEP kann auch als Programm für ein System-Kommando verwendet werden,
+                    bei der keine Interaktion mit dem Benutzer stattfindet. Dabei wird automatisch
+                    ein CMD-Makro aus der INI-Datei ausgeführt und danach TUSTEP wieder
+                    beendet.<br /> Welches Makro ausgeführt wird und wo sich die INI-Datei befindet,
+                    wird durch System-Variablen festgelegt. Die System-Variablen werden mit einem
+                    »Script« definiert. Das Script muss in einer ASCII-Datei vorliegen. Zum
+                    Einrichten einer Datei mit einem solchen Script kann das Makro *CMD verwendet
+                    werden.</blockquote>
+                <p class="right x-small">
+                    <a href="http://www.tustep.uni-tuebingen.de/pdf/handbuch.pdf#page=89"
+                        target="_blank">Handbuch 89f</a>
+                </p>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <div class="three columns">
+                        <h2>
+                            <code>#*cmd</code>
+                        </h2>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/cmd.png">
+                                <img src="resources/img/cmd.png" />
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="nine columns">
+                        <ul class="even-left small">
+                            <li>Einrichten der ASCII-Datei, die das Script enthält</li>
+                            <li>Einrichten der INI-Datei, falls sie im angegebenen Verzeichnis noch
+                                nicht existiert.</li>
+                            <li>Einrichten eines Segments mit dem Namen INIT in der INI-Datei, falls
+                                noch kein Segment mit diesem Namen existiert</li>
+                            <li>Einrichten von Segmenten mit dem Namen CONT und RECO in der
+                                INI-Datei, falls noch kein Segment mit dem jeweiligen Namen
+                                existiert.</li>
+                            <li>Einrichten eines Segments mit dem Namen des Scripts in der
+                                INI-Datei, falls noch kein Segment mit diesem Namen existiert. Das
+                                Segment enthält ein aufrufbares CMD-Makro. Es dient nur als
+                                Stellvertreter; es muss noch angepasst und ergänzt oder durch ein
+                                eigenes Makro ersetzt werden.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Aufruf</h2>
+                <p>Nachdem das Script eingerichtet ist, kann es auf Betriebssystemebene aufgerufen
+                    werden. Dadurch wird eine neue TUSTEP-Sitzung begonnen, das Makro ausgeführt und
+                    die TUSTEP-Sitzung wieder beendet. Der Aufruf kann z. B. wie folgt aussehen:</p>
+                <pre><code>scriptname quelldatei zieldatei</code></pre>
+                <p>Das Ablaufprotokoll der TUSTEP-Sitzung wird in eine Datei abgelegt; sie steht in
+                    dem für die LOG-Datei angegebenen Verzeichnis und hat den gleichen Namen wie das
+                    Script, jedoch mit der Namenserweiterung (Extension) »log«.</p>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <h2>MAC</h2>
+                    <div class="twalve columns even-left">
+                        <pre><code>#! /bin/bash
+#= Script mit bash abarbeiten
+export TUSTEP_MDS=BATCH
+#= TUSTEP muss im Batch-Modus laufen
+export TUSTEP_LIB=~/Seafile/BKD/corresp/tools/MAC-TUSTEP/TUSTEP.app/Contents
+#= Pfad zum TUSTEP-Directory tustep
+export TUSTEP_DSK=~/Seafile/BKD/corresp/tools/oxy_tus
+#= Pfad zur INI-Datei
+export TUSTEP_SCR=~/Seafile/BKD/corresp/tools/oxy_tus
+#= Pfad zu den Scratch-Dateien
+export TUSTEP_PRJ=-
+#= Subdir. fuer TUSTEP_DSK + TUSTEP_SCR
+export TUSTEP_MEM=88800000
+#= Eindeutige Sitzungsnummer
+export TUSTEP_INI=oxy_tus.ini
+#= nichts oder Name der INI-Datei
+export TUSTEP_CMD=get_entities
+#= Name des Makros in der INI-Datei
+export TUSTEP_1=$1
+export TUSTEP_2=$2
+#= Aufruf-Argumente fuer Makro merken
+$TUSTEP_LIB/tustep/command > '/Users/air11neu/test.log'
+#= TUSTEP-Makro ausführen
+#= Ablaufprotokoll --> test.log
+#= Hinweis: Um diese Datei zu ändern oder zu ergänzen, sollte
+#=          der TUSTEP-Editor wie folgt aufgerufen werden:
+#=          #*E,,datei,CODE=UTF8</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2>Logdatei</h2>
+                <figure class="mfp-lightbox even-left">
+                    <a href="resources/img/log_Datei.png">
+                        <img src="resources/img/log_Datei.png" />
+                    </a>
+                </figure>
+                <p class="x-small right">Log-Datei des Systemkommandos</p>
+            </div>
+            <div class="step">
+                <h2>Oxygen: Externe Tools</h2>
+                <div class="row">
+                    <div class="eight columns">
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/oxygen_ext_tools_get_entities.png">
+                                <img src="resources/img/oxygen_ext_tools_get_entities.png" />
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                       
+                        <ul class="even-left">
+                            <li><code>${cf}</code> The path of the currently edited file</li>
+                            <li><code>${cfd}</code> The path of current file directory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- unite gallery -->
+        <script src="vendor/unitegallery/js/unitegallery.min.js"></script>
+        <script src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+        <script src="resources/js/unite.gallery.js"></script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- swiper -->
+        <script src="vendor/swiper/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                spaceBetween: 30,
+                hashnav: true
+            });</script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+            var obj = impress();
+            obj.init();
+            initSlideNo(obj);</script>
+        <!--<script>
+            var videoStep = document.getElementById("video-step");
+var video = document.getElementById("video");
+videoStep.addEventListener("impress:stepenter", function() {
+    video.play();
+}, false);
+videoStep.addEventListener("impress:stepleave", function() {
+    video.pause();
+}, false);
+        </script>-->
+        <script>
+            var videos = document.getElementsByTagName("video");
+            Array.prototype.forEach.call(videos, function (video) {
+                var videoStep = video.closest(".step");
+                videoStep.addEventListener("impress:stepenter", function () {
+                    video.play();
+                },
+                false);
+                videoStep.addEventListener("impress:stepleave", function () {
+                    video.pause();
+                },
+                false);
+            });</script>
+    </body>
+</html>
